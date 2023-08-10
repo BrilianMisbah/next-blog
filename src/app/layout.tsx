@@ -1,6 +1,7 @@
 // import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,9 @@ export default function RootLayout({
   const header = (
     <header>
       <div>
-        <h1>Brilian's Blog</h1>
+        <Link href="/">
+          <h1>Brilian's Blog</h1>
+        </Link>
         <p>🤟 Welcome to my tech blog. 💻</p>
       </div>
     </header>
