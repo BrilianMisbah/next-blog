@@ -1,4 +1,4 @@
-// import "./globals.css";
+import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
@@ -17,19 +17,18 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <div>
+      <div className="text-center bg-slate-800 p-8 my-6 rounded-md">
         <Link href="/">
-          <h1>Brilian's Blog</h1>
+          <h1 className="text-3xl text-white font-bold">Brilian's Blog</h1>
         </Link>
-        <p>🤟 Welcome to my tech blog. 💻</p>
+        <p className="text-slate-300">🤟 Welcome to my tech blog. 💻</p>
       </div>
     </header>
   );
 
   const footer = (
     <footer>
-      <div>
-        <br />
+      <div className="border-t border-l-slate-400 mt-6 py-6 text-center text-slate-400">
         <p>Developer by Brilian</p>
       </div>
     </footer>
@@ -39,9 +38,11 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body>
-        {header}
-        {children}
-        {footer}
+        <div className="mx-auto max-w-2xl">
+          {header}
+          {children}
+          {footer}
+        </div>
       </body>
     </html>
   );
